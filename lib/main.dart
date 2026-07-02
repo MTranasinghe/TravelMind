@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:travel_mind/features/auth/presentation/screens/welcome_screen.dart';
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,17 +35,7 @@ class TravelMindApp extends ConsumerWidget {
         ),
         useMaterial3: true,
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text(
-            'Travel Mind',
-            style: TextStyle(
-              fontSize: 32,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ),
+      home: WelcomeScreen()
     );
   }
 }
